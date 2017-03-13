@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="TestApp.Views.MainTabbedPage"
+			Title="MainTabbedPage">
+
+	<TabbedPage.Children>
+		<ContentPage Title="Seite 1">
+
+			<ContentPage.ToolbarItems>
+				<ToolbarItem Text="navigate to A" Command="{Binding NavigateToACommand}" />
+			</ContentPage.ToolbarItems>
+
+			<Label Text="das ist seite 1" />
+		</ContentPage>
+		<ContentPage Title="Seite 2">
+			<Label Text="das ist seite 2" />
+		</ContentPage>
+		<ContentPage Title="Seite 3">
+			<Label Text="das ist seite 3" />
+		</ContentPage>
+	</TabbedPage.Children>
+</TabbedPage>

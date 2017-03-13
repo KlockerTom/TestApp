@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="TestApp.Views.MySecondTabbedPage"
+			Title="SecondTabbedPage">
+
+	<TabbedPage.ToolbarItems>
+		<ToolbarItem Text="ueberll" Command="{Binding NavigateToACommand}" />
+	</TabbedPage.ToolbarItems>
+
+	<TabbedPage.Children>
+		<ContentPage Title="Seite A">
+
+			<ContentPage.ToolbarItems>
+				<ToolbarItem Text="irgendwas A" Command="{Binding NavigateToACommand}" />
+			</ContentPage.ToolbarItems>
+
+			<Label Text="das ist seite A" />
+		</ContentPage>
+		<ContentPage Title="Seite B">
+			<Label Text="das ist seite B" />
+		</ContentPage>
+		<ContentPage Title="Seite C">
+			<Label Text="das ist seite C" />
+		</ContentPage>
+	</TabbedPage.Children>
+</TabbedPage>
